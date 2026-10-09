@@ -1,4 +1,4 @@
-import { Controller,Get,Post,Param,Put,Patch} from '@nestjs/common';
+import { Controller,Get,Post,Param,Put,Patch,Delete} from '@nestjs/common';
 import { CourseService } from './course.service.js';
 
 @Controller('course')
@@ -33,5 +33,9 @@ export class CourseController {
     return this.courseService.patchCourse(id);
   }
 
+    @Delete(':id')
+  deleteCourse(@Param('id') id: string): string {
+    return this.courseService.deleteCourse(id);
+  }
 
 }
