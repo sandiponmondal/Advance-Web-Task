@@ -12,5 +12,14 @@ export class CourseService {
   createCourse(): string {
     return 'Create Course - from Service';
   }
-  
+
+  updateCourse(id: string): string {
+    return `Update Course ${id} - from Service`;
+  }
+
+
+  patchCourse(id: string): string {
+    return `Patch Course ${id} - from Service`;
+  }
+
 }
